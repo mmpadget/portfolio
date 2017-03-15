@@ -1,0 +1,27 @@
+#page {
+  /*background-color: lightblue;*/
+}
+
+header {
+  background-color: navy;
+}
+
+#content {
+  background-color: navy;
+}
+
+#projects-section {
+
+}
+
+footer {
+  background-color: navy;
+}
+
+/*DESKTOP STYLES
+=======================================*/
+@media only screen and (min-width: 640px) {
+  body {
+    background-color: white;
+  }
+}
