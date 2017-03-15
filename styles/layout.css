@@ -1,5 +1,11 @@
 #page {
-  /*background-color: lightblue;*/
+
+}
+
+#header-container {
+  width: 50%;
+  margin: auto;
+  background-color: lightblue;
 }
 
 header {
@@ -10,12 +16,24 @@ header {
   background-color: navy;
 }
 
+#content-container {
+  width: 50%;
+  margin: auto;
+  background-color: lightblue;
+}
+
 #projects-section {
 
 }
 
 footer {
   background-color: navy;
+}
+
+#footer-container {
+  width: 50%;
+  margin: auto;
+  background-color: lightblue;
 }
 
 /*DESKTOP STYLES
