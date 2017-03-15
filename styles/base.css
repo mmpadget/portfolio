@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  color: white;
+  background-color: black;
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+/*TEXT STYLES
+=======================================*/
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/*LINK STYLES
+=======================================*/
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #555;
+}
+
+a:hover, a:focus {
+  color: #666;
+}
+
+a:visited {
+  color: #777;
+}
