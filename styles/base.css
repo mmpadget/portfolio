@@ -1,5 +1,5 @@
-* {
-
+html, body {
+  margin: 0;
 }
 
 body {
@@ -8,12 +8,12 @@ body {
   font-family: sans-serif;
 }
 
-/*TEXT STYLES
-=======================================*/
-p {
-  font-size: 1em;
+img {
+  width: 100%;
 }
 
+/*TEXT STYLES
+=======================================*/
 nav li {
   display: inline;
   margin-right: 10px;

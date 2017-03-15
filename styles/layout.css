@@ -1,45 +1,66 @@
-#page {
-
+.pull-left {
+  float: left;
 }
 
-#header-container {
-  width: 50%;
-  margin: auto;
-  background-color: lightblue;
+.pull-right {
+  float: right;
 }
 
-header {
-  background-color: navy;
-}
-
-#content {
-  background-color: navy;
-}
-
-#content-container {
-  width: 50%;
-  margin: auto;
-  background-color: lightblue;
-}
-
-#projects-section {
-
-}
-
-footer {
-  background-color: navy;
-}
-
-#footer-container {
-  width: 50%;
-  margin: auto;
-  background-color: lightblue;
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /*DESKTOP STYLES
 =======================================*/
 @media only screen and (min-width: 640px) {
   body {
-    background-color: white;
+    background-color: black;
+  }
+
+  #page {
+    margin: 0;
+  }
+
+  #header-container {
+    width: 75%;
+    margin: auto;
+    background-color: black;
+  }
+
+  header {
+    background-color: black;
+  }
+
+  #content {
+    background-color: black;
+  }
+
+  #content-container {
+    width: 75%;
+    margin: auto;
+    background-color: black;
+  }
+
+  #projects-section {
+    overflow: auto;
+  }
+
+  .column1 .column2 .column3 {
+    width: 33.3%;
+    float: left;
+    margin: 1%;
+    background-color: navy;
+  }
+
+  footer {
+    background-color: black;
+  }
+
+  #footer-container {
+    width: 75%;
+    margin: auto;
+    background-color: black;
   }
 }
