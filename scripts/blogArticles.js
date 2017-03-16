@@ -4,7 +4,7 @@ var rawData = [
   {
     title: 'Fracture',
     subTitle: 'Javascript',
-    description: '<p>A browser game where you fix time.</p>',
+    description: 'A browser game where you fix time.',
     projectUrl: 'https://github.com/kurtrm/time-wizards',
     publishedUrl: 'https://kurtrm.github.io/time-wizards/index.html',
     imageUrl: '',
