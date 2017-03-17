@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="" id="page">
+
       <header>
         <div class="" id="header-container">
           <hgroup>
@@ -19,8 +20,8 @@
             <h2>Michael Padget</h2>
           </hgroup>
           <!-- End of header group -->
-          <nav>
-            <ul>
+          <nav class="main-nav">
+            <ul class="all-icons">
               <li class="icon">
                 <a href="https://www.linkedin.com/in/michaelpadget/">
                   <img src="images/linkedin.png" alt="LinkedIn">
@@ -31,7 +32,7 @@
                   <img src="images/github.png" alt="GitHub">
                 </a>
               </li>
-              <li class="icon mobile-menu">
+              <li class="icon icon-menu">
                 <a href="#">
                   <img src="images/menu.png" alt="Menu">
                 </a>
@@ -39,10 +40,11 @@
             </ul>
             <!-- End of icon nav -->
             <ul class="nav-links">
-              <li><a href="#" class="current">Home</a></li>
-              <li><a href="#">Education</a></li>
-              <li><a href="#">Experience</a></li>
-              <li><a href="#">Projects</a></li>
+              <li><a class="tab" data-content="articles" href="#">Home</a></li>
+              <li><a class="tab" data-content="about" href="#">About</a></li>
+              <li><a class="tab" data-content="education" href="#">Education</a></li>
+              <li><a class="tab" data-content="experience" href="#">Experience</a></li>
+              <li><a class="tab" data-content="projects" href="#">Projects</a></li>
             </ul>
             <!-- End of main nav links -->
           </nav>
@@ -51,10 +53,15 @@
         <!-- End header content div -->
       </header>
       <!-- End of header -->
+
       <div class="" id="content">
         <div class="" id="content-container">
-          <section id="projects-section">
-            <article class="project">
+
+          <!-- BEGIN SECTION ARTICLES-->
+          <section id="articles" class="tab-content">
+
+            <!-- BEGIN ARTICLE TEMPLATE -->
+            <article class="template" data-category="placeholder-category">
               <hgroup>
                 <h2></h2>
                 <!-- Title -->
@@ -64,9 +71,9 @@
               <!-- End of header group -->
               <p class="description"></p>
               <!-- Description -->
-              <a class="project-url" href="#">GitHub</a>
+              <a class="project-url" href="#"></a>
               <!-- Project URL -->
-              <a class="published-url" href="#">Website</a>
+              <a class="published-url" href="#"></a>
               <!-- Published URL -->
               <figure>
                 <img src="" alt="">
@@ -77,8 +84,27 @@
               <!-- End of figure -->
             </article>
             <!-- End of article -->
+            <!-- END ARTICLE TEMPLATE -->
+
+            <section id="about" class="tab-content">
+              <header>
+                Welcome to my Blog
+              </header>
+              <article>
+                <h1>Some of my intrests:</h1>
+                <ul>
+                  <li>Coding</li>
+                  <li>Community and the environment</li>
+                  <li>Playing video games</li>
+                  <li>Songwriting and recording</li>
+                </ul>
+              </article>
+            </section>
+            <!-- End of about section -->
+
           </section>
-          <!-- End of projects section -->
+          <!-- END SECTION ARTICLES -->
+
         </div>
         <!-- End of header container div -->
       </div>

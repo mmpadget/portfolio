@@ -7,7 +7,7 @@
   }
 
   body {
-    background-color: white;
+    background-color: #02132C;
   }
 
   #header-container {
@@ -17,7 +17,7 @@
   }
 
   header {
-    background-color: navy;
+    background-color: #02132C;
   }
 
   #content-container {
@@ -27,7 +27,7 @@
   }
 
   #content {
-    background-color: navy;
+    background-color: #02132C;
   }
 
   #footer-container {
@@ -37,6 +37,6 @@
   }
 
   footer {
-    background-color: navy;
+    background-color: #02132C;
   }
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-var articles = [];
+var allArticles = [];
 var rawData; // Variable to stop "undefined" linter error.
 
 // Constructor function: save all properties of 'opts' into 'this'.
@@ -16,9 +16,10 @@ function Article (opts) {
 
 // Clone template on HTML page.
 Article.prototype.toHtml = function() {
-  var $newArticle = $('article.project').clone();
+  var $newArticle = $('article.template').clone();
 
-  $newArticle.removeClass('project');
+  // Prevents dupicating of template multiple times.
+  $newArticle.removeClass('template');
 
   // Edit each instance of copied template with unique data.
   $newArticle.find('h2').html(this.title);
@@ -32,9 +33,9 @@ Article.prototype.toHtml = function() {
 
 // For all raw data, push into articles array.
 rawData.forEach(function(articleObject) {
-  articles.push(new Article(articleObject));
+  allArticles.push(new Article(articleObject));
 });
 
-articles.forEach(function(unicorn) {
-  $('#projects-section').append(unicorn.toHtml());
+allArticles.forEach(function(unicorn) {
+  $('#articles').append(unicorn.toHtml());
 });
