@@ -14,8 +14,33 @@ img {
 /*TEXT STYLES
 =======================================*/
 
+h1 {
+  color: #E6F0FF;
+  /*white blue*/
+}
+
+h2 {
+  color: #E1986B;
+  /*orange*/
+}
+
+h3 {
+  color: #E1CB6B;
+  /*yellow*/
+}
+
 p {
-  line-height: normal;
+  color: #E6F0FF;
+  /*white blue*/
+}
+
+p.text-center {
+  text-align: center;
+}
+
+li {
+  color: #E6F0FF;
+  /*white blue*/
 }
 
 /*LINK STYLES
@@ -23,13 +48,24 @@ p {
 
 a, a:link, a:active {
   text-decoration: none;
-  color: black;
+}
+
+a:link {
+  color: #FFFAE4;
+  /*white yellow*/
+}
+
+a:active {
+  color: ##62539C;
+  /*purple*/
 }
 
 a:hover, a:focus {
-  color: #666;
+  color: #FFEEE4;
+  /*white orange*/
 }
 
 a:visited {
-  color: #777;
+  color: #459180;
+  /*green*/
 }

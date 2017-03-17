@@ -1,5 +1,5 @@
 'use strict';
-/*
+
 var articleView = {};
 
 // For any child element, click "this"
@@ -20,4 +20,3 @@ articleView.handleMainNav = function () {
 $(document).ready(function() {
   articleView.handleMainNav();
 });
-*/

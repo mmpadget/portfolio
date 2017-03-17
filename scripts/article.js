@@ -39,3 +39,5 @@ rawData.forEach(function(articleObject) {
 allArticles.forEach(function(unicorn) {
   $('#articles').append(unicorn.toHtml());
 });
+
+$('article.template').hide();

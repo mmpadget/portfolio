@@ -15,3 +15,7 @@ nav li {
   display: inline;
   margin-right: 20px;
 }
+
+article {
+  margin-bottom: 25px;
+}
