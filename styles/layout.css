@@ -1,42 +1,57 @@
+a.hide {
+  visibility: hidden;
+}
+
 /*DESKTOP STYLES
 =======================================*/
 @media only screen and (min-width: 640px) {
 
-  li.mobile-menu {
+  li.icon-menu {
     display: none;
   }
 
   body {
-    background-color: white;
+    background-color: #02132C;
+    /*Darkest Blue*/
   }
 
   #header-container {
     width: 75%;
-    margin: auto;
-    background-color: lightblue;
+    margin: 10px auto 0px auto;
+    padding: 10px;
   }
 
   header {
-    background-color: navy;
+    background-color: #02132C;
+    /*Darkest Blue*/
   }
 
   #content-container {
     width: 75%;
-    margin: auto;
-    background-color: lightblue;
+    margin: 10px auto 0px auto;
+    padding: 10px;
+    background-color: #082149;
+    /*Next Darkest Blue*/
+    border: 3px solid #193664;
+    /*Middle Blue*/
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
   }
 
   #content {
-    background-color: navy;
+    background-color: #02132C;
+    /*Darkest Blue*/
   }
 
   #footer-container {
     width: 75%;
-    margin: auto;
-    background-color: lightblue;
+    margin: 10px auto 10px auto;
+    padding: 10px;
   }
 
   footer {
-    background-color: navy;
+    background-color: #02132C;
+    /*Darkest Blue*/
   }
 }
