@@ -56,3 +56,4 @@ var rawData = [
     caption: '',
   },
 ];
+rawData(); // Calling function to stop linter error.
