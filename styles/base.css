@@ -1,3 +1,6 @@
+/* PAGE STYLES
+=======================================*/
+
 html, body {
   margin: 0;
 }
@@ -5,33 +8,153 @@ html, body {
 body {
   color: black;
   font-family: sans-serif;
+  /*typescale*/
+  font-size: 100%;
+}
+
+/*typescale*/
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+/*typescale*/
+#page {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+}
+
+/*typescale*/
+@media (min-width: 43.75em) {
+  #page {
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
 }
 
 img {
   width: 100%;
 }
 
-/*TEXT STYLES
+/* HEADING STYLES
 =======================================*/
 
 h1 {
-  color: #E6F0FF;
+  font-family: 'Teko', sans-serif;
+  letter-spacing: 4px;
   /*white blue*/
+  color: #E6F0FF;
+  /*typescale*/
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */
+}
+
+/*typescale*/
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+}
+
+/*typescale*/
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  }
 }
 
 h2 {
-  color: #E1986B;
+  font-family: 'Fjalla One', sans-serif;
   /*orange*/
+  color: #E1986B;
+  /*typescale*/
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */
+}
+
+/*typescale*/
+@media (min-width: 43.75em) {
+  h2 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+}
+
+/*typescale*/
+@media (min-width: 56.25em) {
+  h2 {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
 }
 
 h3 {
-  color: #E1CB6B;
+  font-family: 'Pontano Sans', sans-serif;
   /*yellow*/
+  color: #E1CB6B;
+  /*typescale*/
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */
 }
 
+/*typescale*/
+@media (min-width: 43.75em) {
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+}
+
+/*typescale*/
+@media (min-width: 56.25em) {
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+/*typescale*/
+h4 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.125em;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111;
+}
+
+/*typescale*/
+@media (min-width: 43.75em) {
+  h4 {
+    line-height: 1.22222222;
+    /* (22px / 18px */
+  }
+}
+
+/* TEXT STYLES
+=======================================*/
+
 p {
-  color: #E6F0FF;
+  font-family: 'News Cycle', sans-serif;
   /*white blue*/
+  color: #E6F0FF;
 }
 
 p.text-center {
@@ -39,33 +162,62 @@ p.text-center {
 }
 
 li {
-  color: #E6F0FF;
+  font-family: 'Share', cursive;
   /*white blue*/
+  color: #E6F0FF;
 }
 
-/*LINK STYLES
+li a {
+  font-family: 'Share', cursive;
+  font-size: 24px;
+}
+
+/*typescale*/
+blockquote {
+  font-family: 'Playball', cursive;
+  font-size: 1.25em;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */
+}
+
+/*typescale*/
+@media (min-width: 43.75em) {
+  blockquote {
+    font-size: 1.5em;
+    /* 24px / 16px = */
+    line-height: 1.45833333;
+    /* 35px / 24px */
+  }
+}
+
+/* LINK STYLES
 =======================================*/
+
+a {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
 
 a, a:link, a:active {
   text-decoration: none;
 }
 
 a:link {
-  color: #FFFAE4;
   /*white yellow*/
+  color: #FFFAE4;
 }
 
 a:active {
-  color: ##62539C;
   /*purple*/
+  color: ##62539C;
 }
 
 a:hover, a:focus {
-  color: #FFEEE4;
   /*white orange*/
+  color: #FFEEE4;
 }
 
 a:visited {
-  color: #459180;
   /*green*/
+  color: #459180;
 }
