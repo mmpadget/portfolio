@@ -5,40 +5,56 @@
     <title>Portfolio</title>
     <meta name =“viewport” content=“width=device-width, initial-scale=1”>
     <link rel="stylesheet" href="vendor/styles/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Arimo|Fira+Sans+Extra+Condensed|Fjalla+One|News+Cycle|Playball|Pontano+Sans|Rajdhani|Share|Teko|Ubuntu+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
+    <!-- Handlebars -->
+    <script id="articles-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <h3>{{subTitle}}</h3>
+      <p>{{description}}</p>
+      <a class="project-url" href="{{projectUrl}}">GitHub</a>
+      <a class="published-url" href="{{publishedUrl}}">Website</a>
+    </script>
+    <!-- End of Handlebars -->
+
   </head>
   <body>
-    <div class="" id="page">
+    <div id="page">
 
       <header>
-        <div class="" id="header-container">
+        <div id="header-container">
           <hgroup>
             <h1>Portfolio</h1>
             <p>Michael Padget</p>
           </hgroup>
           <!-- End of header group -->
+
           <nav class="main-nav">
             <ul class="all-icons">
               <li class="icon">
-                <a href="https://www.linkedin.com/in/michaelpadget/">
-                  <img src="images/linkedin.png" alt="LinkedIn">
+                <a href="http://github.com/mmpadget">
+                  <i class="fa fa-github-square fa-lg" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="icon">
-                <a href="http://github.com/mmpadget">
-                  <img src="images/github.png" alt="GitHub">
+                <a href="https://www.linkedin.com/in/michaelpadget/">
+                  <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="icon icon-menu">
                 <a href="#">
-                  <img src="images/menu.png" alt="Menu">
+                  <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
             <!-- End of icon nav -->
+
             <ul class="nav-links">
               <li><a class="tab" data-content="articles" href="#">Home</a></li>
               <li><a class="tab" data-content="about" href="#">About</a></li>
@@ -47,6 +63,7 @@
               <li><a class="tab hide" data-content="projects" href="#">Projects</a></li>
             </ul>
             <!-- End of main nav links -->
+
           </nav>
           <!-- End of nav -->
         </div>
@@ -54,24 +71,19 @@
       </header>
       <!-- End of header -->
 
-      <div class="" id="content">
-        <div class="" id="content-container">
+      <div id="content">
+        <div id="content-container">
 
           <!-- BEGIN SECTION ARTICLES-->
           <section id="articles" class="tab-content">
             <!-- BEGIN ARTICLE TEMPLATE -->
             <article class="template" data-category="placeholder-category">
               <hgroup>
-                <h2></h2>
                 <!-- Title -->
-                <h3></h3>
                 <!-- Subtitle -->
               </hgroup>
-              <p class="description"></p>
               <!-- Description -->
-              <a class="project-url" href="">GitHub</a>
               <!-- Project URL -->
-              <a class="published-url" href="">Website</a>
               <!-- Published URL -->
               <figure>
                 <!-- Image URL -->
@@ -95,6 +107,7 @@
             </article>
           </section>
           <!-- End of about section -->
+
         </div>
         <!-- End of header container div -->
       </div>
@@ -102,13 +115,16 @@
 
       <footer>
         <div id="footer-container">
-          <p class="text-center">&copy; 2017 Michael Padget</p>
+          <p>&copy; 2017 Michael Padget</p>
         </div>
       </footer>
       <!-- End of footer -->
+
     </div>
     <!-- End of page div -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>

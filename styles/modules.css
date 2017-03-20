@@ -19,3 +19,7 @@ nav li {
 article {
   margin-bottom: 25px;
 }
+
+ul.nav-links, ul.all-icons {
+  padding: 0;
+}

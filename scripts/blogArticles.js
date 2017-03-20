@@ -13,7 +13,7 @@ var rawData = [
   {
     title: 'Bus Mall',
     subTitle: 'Javascript',
-    description: '<p>Random image selection with vote tracking.</p>',
+    description: 'Random image selection with vote tracking.',
     projectUrl: 'https://github.com/mmpadget/bus-mall',
     publishedUrl: 'https://mmpadget.github.io/bus-mall/',
     imageUrl: '',
@@ -22,7 +22,7 @@ var rawData = [
   {
     title: 'Chocolate Pizza',
     subTitle: 'CSS',
-    description: '<p>A CSS site recreation exercise.</p>',
+    description: 'A CSS site recreation exercise.',
     projectUrl: 'https://github.com/mmpadget/chocolate-pizza',
     publishedUrl: '',
     imageUrl: '',
@@ -31,7 +31,7 @@ var rawData = [
   {
     title: 'Salmon Cookies',
     subTitle: 'Javascript',
-    description: '<p>Dynamic HTML table generation.</p>',
+    description: 'Dynamic HTML table generation.',
     projectUrl: 'https://github.com/mmpadget/salmon-cookies',
     publishedUrl: 'https://mmpadget.github.io/salmon-cookies/',
     imageUrl: '',
@@ -40,7 +40,7 @@ var rawData = [
   {
     title: 'About Me',
     subTitle: 'Javascript',
-    description: '<p>A guessing game with questions about me.</p>',
+    description: 'A guessing game with questions about me.',
     projectUrl: 'https://github.com/mmpadget/about-me',
     publishedUrl: 'https://mmpadget.github.io/about-me/',
     imageUrl: '',
@@ -49,9 +49,9 @@ var rawData = [
   {
     title: 'Spark Community',
     subTitle: 'C#',
-    description: '<p>A MMORPG project built in Unity3D.</p>',
-    projectUrl: 'https://www.gamesoflight.com/category/game/updates/',
-    publishedUrl: '',
+    description: 'A MMORPG project built in Unity3D.',
+    projectUrl: 'https://github.com/gamesoflight/',
+    publishedUrl: 'https://www.gamesoflight.com/category/game/updates/',
     imageUrl: '',
     caption: '',
   },
