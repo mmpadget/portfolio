@@ -148,28 +148,33 @@ h4 {
   }
 }
 
+/* TEXT ICONS
+=======================================*/
+
+i.fa {
+  color: #E6F0FF;
+}
+
 /* TEXT STYLES
 =======================================*/
 
 p {
   font-family: 'News Cycle', sans-serif;
+  font-size: 1.25em;
   /*white blue*/
   color: #E6F0FF;
 }
 
-p.text-center {
-  text-align: center;
-}
-
 li {
-  font-family: 'Share', cursive;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 1.25em;
   /*white blue*/
   color: #E6F0FF;
 }
 
 li a {
   font-family: 'Share', cursive;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 /*typescale*/
@@ -196,6 +201,7 @@ blockquote {
 
 a {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 1.25em;
 }
 
 a, a:link, a:active {
