@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
+    <!-- Handlebars -->
+    <script id="articles-template" type="text/x-handlebars-template">
+      <h2>{{title}}</h2>
+      <h3>{{subTitle}}</h3>
+      <p>{{description}}</p>
+      <a class="project-url" href="{{projectUrl}}">GitHub</a>
+      <a class="published-url" href="{{publishedUrl}}">Website</a>
+    </script>
+    <!-- End of Handlebars -->
+
   </head>
   <body>
     <div id="page">
@@ -65,16 +76,11 @@
             <!-- BEGIN ARTICLE TEMPLATE -->
             <article class="template" data-category="placeholder-category">
               <hgroup>
-                <h2></h2>
                 <!-- Title -->
-                <h3></h3>
                 <!-- Subtitle -->
               </hgroup>
-              <p class="description"></p>
               <!-- Description -->
-              <a class="project-url" href="">GitHub</a>
               <!-- Project URL -->
-              <a class="published-url" href="">Website</a>
               <!-- Published URL -->
               <figure>
                 <!-- Image URL -->
@@ -112,6 +118,8 @@
     </div>
     <!-- End of page div -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
