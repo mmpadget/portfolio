@@ -37,6 +37,10 @@ ul.nav-links {
   display: none;
 }
 
+.main-nav:hover .nav-links{
+  display: block;
+}
+
 /*DESKTOP STYLES
 =======================================*/
 @media only screen and (min-width: 640px) {
@@ -64,6 +68,12 @@ ul.nav-links {
   }
 
   li.icon-menu {
+    display: none;
+  }
+  .main-nav:hover .nav-links{
+    display: inline;
+  }
+  .icon-icon-menu{
     display: none;
   }
 }
