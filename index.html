@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/modules.css">
 
     <!-- Handlebars -->
-    <script id="articles-template" type="text/x-handlebars-template">
+    <script id="projects-template" type="text/x-handlebars-template">
       <h2>{{title}}</h2>
       <h3>{{subTitle}}</h3>
       <p>{{description}}</p>
@@ -25,8 +25,8 @@
   </head>
   <body>
     <div id="page">
-
       <header>
+        <!-- Background Image Credit: Zach Taiji https://unsplash.com/@azntaiji -->
         <div id="header-container">
           <hgroup>
             <h1>Portfolio</h1>
@@ -55,9 +55,9 @@
             <!-- End of icon nav -->
 
             <ul class="nav-links">
-              <li><a class="tab" data-content="articles" href="#">Home</a></li>
+              <li><a class="tab" data-content="projects" href="#">Home</a></li>
               <li><a class="tab" data-content="about" href="#">About</a></li>
-            </ul>
+            </ul><br><br>
             <!-- End of main nav links -->
 
           </nav>
@@ -70,30 +70,18 @@
       <div id="content">
         <div id="content-container">
 
-          <!-- BEGIN SECTION ARTICLES-->
-          <section id="articles" class="tab-content">
-            <!-- BEGIN ARTICLE TEMPLATE -->
+          <!-- BEGIN SECTION PROJECTS-->
+          <section id="projects" class="tab-content">
+            <!-- BEGIN PROJECT TEMPLATE -->
             <article class="template" data-category="placeholder-category">
               <hgroup>
-                <!-- <h2 id="article-title"></h2> -->
-                <!-- Title -->
-                <!-- <h3 id="sub-title"></h3> -->
-                <!-- Subtitle -->
               </hgroup>
-              <!-- <p id="description"></p> -->
-              <!-- Description -->
-              <!-- <a id="project-url" href="#"></a> -->
-              <!-- Project URL -->
-              <!-- <a id="published-url" href="#"></a> -->
-              <!-- Published URL -->
               <figure>
-                <!-- Image URL -->
-                <!-- Image caption -->
               </figure>
             </article>
-            <!-- END ARTICLE TEMPLATE -->
+            <!-- END PROJECT TEMPLATE -->
           </section>
-          <!-- END SECTION ARTICLES -->
+          <!-- END SECTION PROJECTS -->
 
           <section id="about" class="tab-content">
             <article>
@@ -125,12 +113,11 @@
     <!-- End of page div -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
-    <script src="scripts/blogArticles.js"></script>
-    <script src="scripts/article.js"></script>
-    <script src="scripts/articleView.js"></script>
+    <script src="scripts/project.js"></script>
+    <script src="scripts/projectView.js"></script>
     <script>
       //Initiate the retrieval of data.
-      Article.fetchAll();
+      Project.fetchAll();
     </script>
   </body>
 </html>

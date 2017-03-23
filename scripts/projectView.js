@@ -1,9 +1,9 @@
 'use strict';
 
-const articleView = {};
+const projectView = {};
 
 // For any child element, click "this"
-articleView.handleMainNav = function () {
+projectView.handleMainNav = function () {
   $('.nav-links').on('click', '.tab', function() {
     // Show the content of that tab.
     $('.tab-content').hide();
@@ -12,12 +12,11 @@ articleView.handleMainNav = function () {
   $('.nav-links .tab:first').click();
 };
 
-articleView.initIndexPage = function() {
+projectView.initIndexPage = function() {
   // eslint-disable-next-line
-  console.log($('#articles').length);
-  Article.all.forEach(function(a) {
-    $('#articles').append(a.toHtml())
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml())
   });
 
-  articleView.handleMainNav();
+  projectView.handleMainNav();
 };

@@ -1,20 +1,33 @@
-body, header, footer {
+body, footer {
   background-color: #02132C;
   /*Darkest Blue*/
 }
 
-#content {
-  border-top: 3px solid #193664;
-  border-bottom: 3px solid #193664;
-  /*Middle Blue*/
-  background-color: #082149;
-  /*Next Darkest Blue*/
+body {
+  /*background-color: #02132C;*/
+  background-image: url(../images/zach-taiji-90810.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+header {
+  background-color: rgba(2,19,44,0.75);
+  margin-top: -10px;
+  margin-bottom: 0px;
 }
 
 #header-container {
   width: 90%;
-  margin: 10px auto 0px auto;
+  margin: 10px auto 0 auto;
   padding: 10px;
+}
+
+#content {
+  border-top: 8px solid #193664;
+  border-bottom: 8px solid #193664;
+  /*Middle Blue*/
+  background-color: #082149;
+  /*Next Darkest Blue*/
 }
 
 #content-container {

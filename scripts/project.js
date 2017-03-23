@@ -1,7 +1,7 @@
 'use strict';
 
 // Constructor function.
-function Article (opts) {
+function Project (opts) {
   this.title = opts.title;
   this.subTitle = opts.subTitle;
   this.description = opts.description;
@@ -11,43 +11,43 @@ function Article (opts) {
   this.caption = opts.caption;
 }
 
-// Track list of all articles directly on constructor.
-Article.all = [];
+// Track list of all projects directly on constructor.
+Project.all = [];
 
 // Set source of text from handlebars template.
-Article.prototype.toHtml = function() {
+Project.prototype.toHtml = function() {
   // Compile and render the handlebars template.
   // eslint-disable-next-line
-  let template = Handlebars.compile($('#articles-template').text());
+  let template = Handlebars.compile($('#projects-template').text());
   // eslint-disable-next-line
   return template(this);
 };
 
-// Use rawData to instantiate all articles.
-Article.loadAll = function(rawData) {
+// Use rawData to instantiate all projects.
+Project.loadAll = function(rawData) {
   rawData.forEach(function(ele) {
-    Article.all.push(new Article(ele));
+    Project.all.push(new Project(ele));
   })
 }
 
 // Retrieve data (local/remote), process, hand to view.
-Article.fetchAll = function() {
+Project.fetchAll = function() {
   if (localStorage.rawData) {
     // If rawData is already in local storage, load all.
-    Article.loadAll(JSON.parse(localStorage.rawData));
+    Project.loadAll(JSON.parse(localStorage.rawData));
     // Render the index page.
     // eslint-disable-next-line
-    articleView.initIndexPage();
+    projectView.initIndexPage();
   } else {
     // Load rawData in JSON file from the server.
-    $.getJSON('/data/projectData.json', function(response) {
+    $.getJSON('/model/data.json', function(response) {
       // Cache in localStorage so we can skip next time.
       localStorage.setItem('rawData', JSON.stringify(response));
-      // Load all data into article all with load all.
-      Article.loadAll(response);
+      // Load all data into project with load all.
+      Project.loadAll(response);
       // Render the index page.
       // eslint-disable-next-line
-      articleView.initIndexPage();
+      projectView.initIndexPage();
     })
   }
 }
