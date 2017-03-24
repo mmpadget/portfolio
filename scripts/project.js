@@ -19,7 +19,6 @@ Project.prototype.toHtml = function() {
   // Compile and render the handlebars template.
   // eslint-disable-next-line
   let template = Handlebars.compile($('#projects-template').text());
-  // eslint-disable-next-line
   return template(this);
 };
 
