@@ -39,7 +39,7 @@ Project.fetchAll = function() {
     projectView.initIndexPage();
   } else {
     // Load rawData in JSON file from the server.
-    $.getJSON('/model/data.json', function(response) {
+    $.getJSON('/data/data.json', function(response) {
       // Cache in localStorage so we can skip next time.
       localStorage.setItem('rawData', JSON.stringify(response));
       // Load all data into project with load all.
