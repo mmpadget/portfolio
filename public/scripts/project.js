@@ -19,7 +19,6 @@ Project.prototype.toHtml = function() {
   // Compile and render the handlebars template.
   // eslint-disable-next-line
   let template = Handlebars.compile($('#projects-template').text());
-  // eslint-disable-next-line
   return template(this);
 };
 
@@ -40,7 +39,7 @@ Project.fetchAll = function() {
     projectView.initIndexPage();
   } else {
     // Load rawData in JSON file from the server.
-    $.getJSON('/model/data.json', function(response) {
+    $.getJSON('/data/data.json', function(response) {
       // Cache in localStorage so we can skip next time.
       localStorage.setItem('rawData', JSON.stringify(response));
       // Load all data into project with load all.

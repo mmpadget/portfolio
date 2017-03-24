@@ -30,6 +30,10 @@ header {
   /*Next Darkest Blue*/
 }
 
+#content img {
+  width: 100%;
+}
+
 #content-container {
   width: 90%;
   margin: 0px auto 30px auto;
