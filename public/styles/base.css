@@ -165,6 +165,15 @@ p {
   color: #E6F0FF;
 }
 
+dt, dd {
+  font-family: 'News Cycle', sans-serif;
+  font-size: 1.25em;
+  /*purple*/
+  color: #62539C;
+  display: inline;
+  margin-right: -30px;
+}
+
 li {
   font-family: 'News Cycle', sans-serif;
   font-size: 1.25em;

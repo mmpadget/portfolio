@@ -1,29 +1,17 @@
 'use strict';
 
-// TODO: Use FP concepts and JS array methods to organize and/or manipulate your data
-
-  // TODO: Eliminate all for loops.
-
-  // TODO: In at least one place, enclose the contents of a script file in an IIFE, that exports your high-level objects.
-
-  // TODO: Refactor any parts of your app that could be more loosely coupled. Make smaller functions that can accept and expect the return values of other functions!
-
-  // TODO: Use of at least one .reduce() method. Think of a useful way to use reduce. Maybe you want to put some "fun facts stats" in your footer?
+// TODO: In at least one place, enclose the contents of a script file in an IIFE, that exports your high-level objects.
 
 (function(module) {
 
-  // Constructor function.
-  function Project (opts) {
-    this.title = opts.title;
-    this.subTitle = opts.subTitle;
-    this.description = opts.description;
-    this.projectUrl = opts.projectUrl;
-    this.publishedUrl = opts.publishedUrl;
-    this.imageUrl = opts.imageUrl;
-    this.caption = opts.caption;
+  // TODO: How might you refactor your constructor function to be able to accept any number of properties?
+
+  // Object.keys iterates over child objects.
+  function Project(opts) {
+    Object.keys(opts).forEach(e => this[e] = opts[e]);
   }
 
-  // Track list of all projects directly on constructor.
+  // All project objects stored in an array.
   Project.all = [];
 
   // Set source of text from handlebars template.
@@ -31,6 +19,10 @@
     // Compile and render the handlebars template.
     // eslint-disable-next-line
     let template = Handlebars.compile($('#projects-template').text());
+
+    $('#project-stats .total-projects').text(Project.all.length);
+    $('#project-stats .words').text(Project.numWordsAll());
+
     return template(this);
   };
 
@@ -40,6 +32,12 @@
     Project.all = rows.map(function(ele) {
       return new Project(ele);
     })
+  };
+
+  // TODO: Use of at least one .reduce() method. Think of a useful way to use reduce. Maybe you want to put some "fun facts stats" in your footer?
+
+  Project.numWordsAll = () => {
+    return Project.all.map(article => article.description.split(' ').length).reduce((acc, val) => acc + val);
   };
 
   // Retrieve data (local/remote), process, hand to view.
