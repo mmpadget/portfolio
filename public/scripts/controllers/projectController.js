@@ -4,11 +4,9 @@
   const projectController = {};
 
   projectController.init = function() {
-    //$('.nav-links').hide();
     $('.tab-content').hide();
-    $('#profile-links').hide();
+    $('#projects-section').show();
     $('#project-stats').show();
-    $('#projects').show();
   }
 
   module.projectController = projectController;

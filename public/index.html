@@ -21,9 +21,23 @@
       <a class="project-url" href="{{projectUrl}}">GitHub</a>
       <a class="published-url" href="{{publishedUrl}}">Website</a>
     </script>
-    <!-- End of Handlebars -->
+    <!-- End of Projects Template -->
 
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{}}</h3></a>
+        <p>Description: {{}}</p>
+        <p>Language: {{}}</p>
+        <p>Created: {{}}</p>
+        <p>Last updated: {{}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
+    <!-- End of Handlebars -->
   </head>
+
   <body>
     <div id="page">
       <header>
@@ -35,6 +49,7 @@
           </hgroup>
           <!-- End of header group -->
           <nav class="main-nav">
+
             <ul class="all-icons">
               <li class="icon">
                 <a href="http://github.com/mmpadget" target="_blank">
@@ -58,6 +73,7 @@
               <li class="tab" data-content="projects"><a href="/">Home</a></li>
               <li class="tab" data-content="about"><a href="/about">About</a></li>
               <li class="tab" data-content="profiles"><a href="/profiles">Profiles</a></li>
+              <li class="tab" data-content="stats"><a href="/stats">Stats</a></li>
             </ul><br><br>
             <!-- End of main nav links -->
 
@@ -72,15 +88,21 @@
         <div id="content-container">
 
           <!-- BEGIN SECTION PROJECTS-->
-          <section id="projects" class="tab-content">
+          <section id="projects-section" class="tab-content">
             <!-- BEGIN PROJECT TEMPLATE -->
             <article class="template" data-category="placeholder-category">
-              <figure>
-              </figure>
             </article>
             <!-- END PROJECT TEMPLATE -->
           </section>
           <!-- END SECTION PROJECTS -->
+
+          <section id="project-stats" class="tab-content">
+            <dt>Total projects shared:</dt> <dd class="total-projects"></dd><br>
+            <dt>Total description words:</dt> <dd class="words"></dd>
+            <ul class="page-stats">
+              <!-- Handlebars template stats -->
+            </ul>
+          </section>
 
           <section id="about" class="tab-content">
             <article>
@@ -91,22 +113,21 @@
                 <li>Community and the environment</li>
                 <li>Playing video games</li>
                 <li>Songwriting and recording</li>
-              </ul><br><br>
+              </ul>
             </article>
           </section>
-          <!-- End of about section -->
 
-          <section id="profile-links">
+          <section id="profile-links" class="tab-content">
             <h2>Profiles</h2>
-            <a href="https://teamtreehouse.com/michaelpadget">Treehouse</a><br>
-            <a href="https://www.codecademy.com/michaelpadget">Codecademy</a><br>
-            <a href="https://connect.unity.com/u/588149fe090915001cf39b53">Unity</a><br>
+            <p>A few learning profiles:</p>
+            <a href="https://teamtreehouse.com/michaelpadget" target="_blank">Treehouse</a></li><br>
+            <a href="https://www.codecademy.com/michaelpadget" target="_blank">Codecademy</a></li>
           </section>
 
-          <section id="project-stats">
-            <dt>Total projects shared:</dt> <dd class="total-projects"></dd><br>
-            <dt>Total description words:</dt> <dd class="words"></dd>
-            <ul class="page-stats">
+          <section id="git-hub-stats" class="tab-content">
+            <h2>Stats</h2>
+            <p>Example text</p>
+            <ul class="git-stats">
               <!-- Handlebars template stats -->
             </ul>
           </section>
@@ -133,6 +154,7 @@
     <script src="scripts/controllers/projectController.js"></script>
     <script src="scripts/controllers/aboutController.js"></script>
     <script src="scripts/controllers/profileController.js"></script>
+    <script src="scripts/controllers/statsController.js"></script>
     <script src="scripts/controllers/routes.js"></script>
     <!-- Initiate the retrieval of data -->
     <script>
