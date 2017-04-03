@@ -1,7 +1,5 @@
 'use strict';
 
-// TODO: IIFE present on at least one .js file. Ensure that your JS modules are written in an OOP fashion and are wrapped in an IFFE in order to expose the module to the window
-
 (function(module) {
 
   const projectView = {};
@@ -16,15 +14,14 @@
     $('.nav-links .tab:first').click();
   };
 
-  projectView.initIndexPage = function() {
+  projectView.initIndexPage = () => {
     // eslint-disable-next-line
-    Project.all.forEach(function(a) {
-      $('#projects').append(a.toHtml())
-    });
-
-    projectView.handleMainNav();
+    Project.all.forEach(project => {
+      $('#projects').append(project.toHtml('#projects-template'));
+    })
   };
 
+  // eslint-disable-next-line
   module.projectView = projectView;
 
 }(window));

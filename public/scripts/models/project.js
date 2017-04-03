@@ -1,10 +1,6 @@
 'use strict';
 
-// TODO: In at least one place, enclose the contents of a script file in an IIFE, that exports your high-level objects.
-
 (function(module) {
-
-  // TODO: How might you refactor your constructor function to be able to accept any number of properties?
 
   // Object.keys iterates over child objects.
   function Project(opts) {
@@ -26,16 +22,14 @@
     return template(this);
   };
 
-  // TODO: Use of at least one .map() method. Use map where you are transforming one collection into another.
-
+  // Map transforms one collection into another.
   Project.loadAll = rows => {
     Project.all = rows.map(function(ele) {
       return new Project(ele);
     })
   };
 
-  // TODO: Use of at least one .reduce() method. Think of a useful way to use reduce. Maybe you want to put some "fun facts stats" in your footer?
-
+  // Reduce adds up the description words.
   Project.numWordsAll = () => {
     return Project.all.map(article => article.description.split(' ').length).reduce((acc, val) => acc + val);
   };
