@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- TODO: Update project organization to reflect OOP and SPA. -->
 <html>
   <head>
     <meta charset="utf-8">
@@ -38,12 +37,12 @@
           <nav class="main-nav">
             <ul class="all-icons">
               <li class="icon">
-                <a href="http://github.com/mmpadget">
+                <a href="http://github.com/mmpadget" target="_blank">
                   <i class="fa fa-github-square fa-lg" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="icon">
-                <a href="https://www.linkedin.com/in/michaelpadget/">
+                <a href="https://www.linkedin.com/in/michaelpadget/" target="_blank">
                   <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
                 </a>
               </li>
@@ -56,8 +55,9 @@
             <!-- End of icon nav -->
 
             <ul class="nav-links">
-              <li><a class="tab" data-content="projects" href="#">Home</a></li>
-              <li><a class="tab" data-content="about" href="#">About</a></li>
+              <li class="tab" data-content="projects"><a href="/">Home</a></li>
+              <li class="tab" data-content="about"><a href="/about">About</a></li>
+              <li class="tab" data-content="profiles"><a href="/profiles">Profiles</a></li>
             </ul><br><br>
             <!-- End of main nav links -->
 
@@ -96,6 +96,13 @@
           </section>
           <!-- End of about section -->
 
+          <section id="profile-links">
+            <h2>Profiles</h2>
+            <a href="https://teamtreehouse.com/michaelpadget">Treehouse</a><br>
+            <a href="https://www.codecademy.com/michaelpadget">Codecademy</a><br>
+            <a href="https://connect.unity.com/u/588149fe090915001cf39b53">Unity</a><br>
+          </section>
+
           <section id="project-stats">
             <dt>Total projects shared:</dt> <dd class="total-projects"></dd><br>
             <dt>Total description words:</dt> <dd class="words"></dd>
@@ -119,12 +126,16 @@
     </div>
     <!-- End of page div -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <script src="scripts/models/project.js"></script>
     <script src="scripts/views/projectView.js"></script>
     <script src="scripts/controllers/projectController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/profileController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+    <!-- Initiate the retrieval of data -->
     <script>
-      //Initiate the retrieval of data.
       Project.fetchAll();
     </script>
   </body>
